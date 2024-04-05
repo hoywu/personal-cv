@@ -1,0 +1,17 @@
+<script setup lang="ts">
+import cvData from '@/data/CVData';
+import ContentBlock from '@/components/pdf/elem/ContentBlock.vue';
+import PointText from '@/components/pdf/elem/PointText.vue';
+
+const awards = cvData.value!.awards;
+</script>
+
+<template>
+  <ContentBlock>
+    <template #body>
+      <PointText v-for="award in awards" :data="award" />
+    </template>
+  </ContentBlock>
+</template>
+
+<style scoped></style>

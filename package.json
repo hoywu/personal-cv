@@ -1,0 +1,16 @@
+{
+  "name": "personal-cv",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "clean:all": "rm -rf dist",
+    "dev": "cd packages/frontend && pnpm dev",
+    "dev:admin": "cd packages/admin && pnpm dev",
+    "build": "mkdir -p dist && rm -rf dist/frontend && cd packages/frontend && pnpm build && mv dist ../../dist/frontend",
+    "build:admin": "mkdir -p dist && rm -rf dist/admin && cd packages/admin && pnpm build && mv dist ../../dist/admin",
+    "build:all": "pnpm clean:all && pnpm build && pnpm build:admin"
+  },
+  "author": "hoywu",
+  "license": "GPL-3.0-only"
+}

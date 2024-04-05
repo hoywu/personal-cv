@@ -1,0 +1,19 @@
+@import './base.css';
+
+:root {
+  --header-height: 50px;
+  --sidebar-width: 230px;
+
+  --max-width: 1200px;
+}
+
+#app {
+  margin: 0 auto;
+  padding: 0;
+
+  max-width: var(--max-width);
+}
+
+body {
+  background-color: initial;
+}

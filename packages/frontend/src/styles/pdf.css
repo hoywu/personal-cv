@@ -1,0 +1,75 @@
+@import "@/fonts/fonts.css";
+
+:root {
+  --page-margin: 6mm;
+  --t-block-lr-margin: calc(var(--page-margin) + 5mm);
+  --t-block-ud-margin: 3mm;
+
+  --font-size: 12px;
+  --name-font-size: 27px;
+  --header-font-size: calc(var(--font-size) + 3px);
+  --sep-font-size: calc(var(--font-size) + 4px);
+  --content-header-font-size: calc(var(--font-size) + 3px);
+
+  --sep-height: 7mm;
+  --sep-left-padding: 2mm;
+
+  --primary-color: #7e7e7e;
+  --secondary-color: #e4e4e4;
+}
+
+/********** 打印样式 **********/
+@page {
+  size: A4;
+  margin: 0;
+  padding: 0;
+}
+
+@media print {
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background-color: white !important;
+  }
+
+  a,
+  .button-text {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+
+  #cv-box {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: initial !important;
+    width: fit-content !important;
+    height: fit-content !important;
+  }
+
+  #cv-box>* {
+    transform: initial !important;
+    transform-origin: initial !important;
+  }
+
+  #cv-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    border: initial !important;
+    border-radius: initial !important;
+    height: initial !important;
+    min-height: initial !important;
+    box-shadow: initial !important;
+    background: initial !important;
+    /* page-break-after: always; */
+  }
+
+}
