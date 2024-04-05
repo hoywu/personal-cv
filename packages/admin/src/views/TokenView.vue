@@ -6,6 +6,7 @@ const dialog = ref({
   isEdit: false,
   form: {
     ID: undefined,
+    isEnable: true,
     name: '',
     token: '',
     note: '',
@@ -24,6 +25,7 @@ function edit(row: any) {
   dialog.value.isEdit = true;
   dialog.value.form = {
     ID: row.ID,
+    isEnable: row.isEnable,
     name: row.name,
     token: row.token,
     note: row.note,

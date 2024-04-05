@@ -46,6 +46,12 @@ const handleDelete = (_index: number, row: any) => {
               @selection-change="selected = $event">
       <el-table-column type="selection" width="30" />
 
+      <el-table-column prop="isEnable" label="启用" width="65">
+        <template #default="{ row }">
+          <el-switch v-model="row.isEnable"
+                     @change="data.switchToken(row, $event as boolean)" />
+        </template>
+      </el-table-column>
       <el-table-column prop="name" label="名称" />
       <el-table-column prop="token" label="Token" />
       <el-table-column prop="note" label="备注" />

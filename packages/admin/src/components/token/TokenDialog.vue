@@ -18,6 +18,7 @@ watch(() => model.value.visible, () => {
 function clearForm() {
   model.value.form = {
     ID: undefined,
+    isEnable: true,
     name: '',
     token: '',
     note: '',
@@ -43,6 +44,9 @@ function confirm() {
              label-position="left"
              label-width="auto">
 
+      <el-form-item label="启用">
+        <el-switch v-model="model.form.isEnable" />
+      </el-form-item>
       <el-form-item label="名称">
         <el-input v-model="model.form.name" />
       </el-form-item>

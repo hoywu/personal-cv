@@ -3,6 +3,7 @@ import * as h from '@/utils/ErrorHandler';
 
 export interface Token {
   ID?: number;
+  isEnable: boolean;
   name: string;
   token: string;
   note: string;
@@ -39,6 +40,14 @@ export function newToken(token: Token) {
 }
 
 export function updateToken(token: Token) {
+  api.updateToken(token).then(() => {
+    ElMessage.success('更新成功');
+    refreshTokenList();
+  }).catch(h.ErrMsg);
+}
+
+export function switchToken(token: Token, isEnable: boolean) {
+  token.isEnable = isEnable;
   api.updateToken(token).then(() => {
     ElMessage.success('更新成功');
     refreshTokenList();
