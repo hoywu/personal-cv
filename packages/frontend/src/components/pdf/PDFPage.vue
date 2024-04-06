@@ -1,15 +1,8 @@
 <script setup lang="ts">
-import HeaderBlock from '@/components/pdf/block/HeaderBlock.vue';
-import Separator from '@/components/pdf/elem/Separator.vue';
-import EduBlock from '@/components/pdf/block/EduBlock.vue';
-import AwardBlock from '@/components/pdf/block/AwardBlock.vue';
-import ProjectBlock from '@/components/pdf/block/ProjectBlock.vue';
-import CompetenceBlock from '@/components/pdf/block/CompetenceBlock.vue';
-import CertificateBlock from '@/components/pdf/block/CertificateBlock.vue';
 </script>
 
 <template>
-  <div id="cv-page">
+  <div id="pdf-page">
 
     <HeaderBlock />
 
@@ -32,7 +25,7 @@ import CertificateBlock from '@/components/pdf/block/CertificateBlock.vue';
 </template>
 
 <style scoped>
-#cv-page {
+#pdf-page {
   font-family: "sarasa", "monospace";
   font-size: var(--font-size);
   -webkit-text-size-adjust: none;
