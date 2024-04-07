@@ -15,7 +15,7 @@
     <Separator>项目经历</Separator>
     <ProjectBlock />
 
-    <Separator>技术能力</Separator>
+    <Separator>专业技能</Separator>
     <CompetenceBlock />
 
     <Separator>资格证书</Separator>

@@ -10,7 +10,7 @@ const data = cvData.value!.competence;
 <template>
   <ContentBlock>
     <template #body>
-      <Paragraph v-for="text in data" :text="removeWrap(text)" :hanging="true" />
+      <Paragraph v-for="text in data" :text="'- ' + removeWrap(text)" :hanging="true" />
     </template>
   </ContentBlock>
 </template>
