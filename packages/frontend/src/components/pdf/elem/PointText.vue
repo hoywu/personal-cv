@@ -34,23 +34,17 @@ const texts = computed(() => {
 
 <template>
   <Paragraph>
-    <img src="@/assets/icon/dot.svg" class="dot">
-    <Text class="bold-text" v-if="bold" :text="bold" />
-
-    <Paragraph v-if="breakAfterBold" v-for="text in texts" :text="text" />
-    <Text v-else v-for="text in texts" :text="text" />
+    <span class="--pdf-list-item">
+      <PDFDot />
+      <Text class="bold-text" v-if="bold" :text="bold" />
+      <Paragraph v-if="breakAfterBold" v-for="text in texts" :text="text" />
+      <Text v-else v-for="text in texts" :text="text" />
+    </span>
   </Paragraph>
 </template>
 
 <style scoped>
-.dot {
-  width: calc(var(--font-size) - calc(var(--font-size) / 2));
-  height: calc(var(--font-size) - calc(var(--font-size) / 2));
-  padding: calc(var(--font-size) * 0.35) calc(var(--font-size) / 2) calc(var(--font-size) * 0.4) 0;
-  vertical-align: bottom;
-}
-
 .bold-text {
-  font-weight: bold;
+  font-weight: 700;
 }
 </style>
