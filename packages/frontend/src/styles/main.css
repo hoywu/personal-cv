@@ -1,6 +1,24 @@
 @import './base.css';
+@import './fonts/fonts.css';
+
+:root {
+  --cv-page-color: white;
+  --cv-font-size: 14px;
+  --cv-icon-text-size: 14px;
+
+  --cv-name-font-size: 20px;
+  --cv-my-title-font-size: var(--cv-font-size);
+  --cv-my-info-font-size: 14px;
+  --cv-sep-font-size: 17px;
+}
 
 #app {
   margin: 0 auto;
   padding: 0;
+}
+
+.--dated-block-group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }

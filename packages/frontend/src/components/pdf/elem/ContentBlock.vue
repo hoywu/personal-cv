@@ -49,7 +49,7 @@ onMounted(() => {
 }
 
 .content-header>:first-child {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .content-header>:nth-child(3) {

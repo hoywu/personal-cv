@@ -32,6 +32,7 @@
 
   /* Neutral */
   --neutral-100: #fafafc;
+  --neutral-150: #f3f4f6;
   --neutral-200: #e9ebf0;
   --neutral-300: #d9dce3;
   --neutral-400: #c9ced6;
@@ -40,6 +41,7 @@
   --neutral-700: #6d7378;
   --neutral-800: #484c4f;
   --neutral-900: #222526;
+  --neutral-950: #0d0e0f;
 }
 
 body {

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "sarasa";
+    src: local("Sarasa Mono Slab SC"),
+        url("./files/SarasaMonoSlabSC-Regular.woff2") format("woff2"),
+        url("./files/SarasaMonoSlabSC-Regular.woff") format("woff"),
+        url("./files/SarasaMonoSlabSC-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}

@@ -1,9 +1,0 @@
-@font-face {
-    font-family: "sarasa";
-    src: local("Sarasa Mono Slab SC"),
-        local("等距更纱黑体 SC"),
-        url("SarasaMonoSlabSC-Regular.woff") format("woff"),
-        url("SarasaMonoSlabSC-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
