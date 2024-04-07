@@ -7,9 +7,11 @@ export interface CVData {
   photo: string;
   base: {
     name: string;
+    title: string;
     age: number;
     phone: string;
     address: string;
+    city: string;
     email: string;
     blog: {
       text: string;
@@ -19,9 +21,13 @@ export interface CVData {
       text: string;
       link: string;
     };
+    website: {
+      text: string;
+      link: string;
+    };
   };
   watermark: string[];
-  eduBase: {
+  edu_base: {
     school: string;
     degree: string;
     major: string;
@@ -30,7 +36,7 @@ export interface CVData {
   edu: {
     gpa: string;
     course: string;
-    coursePara: string;
+    course_para: string;
     history: string[];
   };
   awards: string[];

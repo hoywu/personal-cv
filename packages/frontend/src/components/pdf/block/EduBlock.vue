@@ -5,7 +5,7 @@ import Paragraph from '@/components/pdf/elem/Paragraph.vue';
 import ContentBlock from '@/components/pdf/elem/ContentBlock.vue';
 import PointText, { type PointTextProps } from '@/components/pdf/elem/PointText.vue';
 
-const edu = cvData.value!.eduBase;
+const edu = cvData.value!.edu_base;
 
 const gpa: PointTextProps = {
   bold: 'GPA: ',
@@ -15,7 +15,7 @@ const course: PointTextProps = {
   bold: '主修课程: ',
   texts: [cvData.value!.edu.course],
 };
-const coursePara = cvData.value!.edu.coursePara;
+const coursePara = cvData.value!.edu.course_para;
 const history: PointTextProps = {
   bold: '校内经历: ',
   breakAfterBold: true,
