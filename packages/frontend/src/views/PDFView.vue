@@ -64,7 +64,7 @@ function print() {
               show-icon>
       <div id="alert-content">
         <span>请返回</span>
-        <el-link type="primary" @click="router.push('/')" link>首页</el-link>
+        <el-link type="primary" @click="router.push({ name: 'cv' })" link>首页</el-link>
         <span>，或点击“下载”按钮下载 A4 PDF 文件</span>
       </div>
     </el-alert>
