@@ -3,6 +3,7 @@
 .env.production
 *.ttf
 *.woff
+*.woff2
 
 # Logs
 logs
