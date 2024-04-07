@@ -19,7 +19,7 @@ go build
 ### 前端
 
 1. 参考 `packages/frontend` 与 `packages/admin` 目录下的 `.env.development` 文件，在相同目录下创建 `.env.production`，将其中的环境变量修改为部署时的值
-2. 修改 `packages/frontend/src/fonts` 目录下的字体 CSS 文件，配置你希望在 PDF 页面使用的字体，这些字体仅用于 PDF 页面的显示，为了确保不出现布局错乱，建议将自定义字体的 `.ttf` `.woff` 文件放置在该目录下，参考我的 CSS 配置引入 (推荐使用 fontmin 等工具压缩字体文件)
+2. 修改 `packages/frontend/src/styles/fonts` 目录下的字体 CSS 文件，配置你希望在 PDF 页面使用的字体，这些字体仅用于 PDF 页面的显示，为了确保不出现布局错乱，建议将自定义字体的 `.ttf` `.woff` 等文件放置在该目录下，参考我的 CSS 配置引入 (推荐使用 fontmin 等工具压缩字体文件)
 
 ``` bash
 pnpm install
