@@ -17,8 +17,6 @@ provide('logFrom', route.name?.toString() || route.fullPath);
 
   </div>
 
-  <el-empty description="建设中" />
-
 </template>
 
 <style scoped>
