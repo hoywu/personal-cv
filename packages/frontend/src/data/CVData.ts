@@ -41,6 +41,7 @@ export interface CVData {
   };
   awards: string[];
   projects: {
+    link: string;
     header: string[];
     body: string[];
   }[];
