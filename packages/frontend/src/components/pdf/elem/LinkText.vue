@@ -18,7 +18,9 @@ function logger() {
 </script>
 
 <template>
-  <a :href="props.link" target="_blank" @click="logger">
+  <a :href="props.link" target="_blank"
+     rel="noopener noreferrer"
+     @click="logger">
     <Text :text="text" />
   </a>
 </template>

@@ -22,7 +22,7 @@ function defaultClick() {
     Msg.success('已复制到剪贴板');
   }).catch((err) => {
     Msg.error('复制失败: ' + err);
-  }); 
+  });
   logger();
 }
 function costomClick() {
@@ -36,7 +36,10 @@ const decoration = props.decoration || 'underline dashed';
 </script>
 
 <template>
-  <a class="button-text" @click.prevent="click">
+  <a class="button-text"
+     target="_blank"
+     rel="noopener noreferrer"
+     @click.prevent="click">
     <Text :text="props.text" />
   </a>
 </template>
