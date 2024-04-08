@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import cvData from '@/data/CVData';
-import ContentBlock from '@/components/pdf/elem/ContentBlock.vue';
-import Paragraph from '@/components/pdf/elem/Paragraph.vue';
 import { removeWrap } from '@/utils/TextUtil';
 
 const data = cvData.value!.competence;

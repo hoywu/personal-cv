@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import ShareButton from '@/components/elem/button/ShareButton.vue';
-
 </script>
 
 <template>

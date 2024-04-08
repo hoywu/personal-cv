@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { loadCVData } from './data/CVData';
-import SiteHeader from '@/components/site/SiteHeader.vue';
-import SiteFooter from '@/components/site/SiteFooter.vue';
 
 const route = useRoute();
 

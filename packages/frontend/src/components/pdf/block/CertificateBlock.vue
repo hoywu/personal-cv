@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import cvData from '@/data/CVData';
-import Paragraph from '@/components/pdf/elem/Paragraph.vue';
-import ContentBlock from '@/components/pdf/elem/ContentBlock.vue';
-import PointText from '@/components/pdf/elem/PointText.vue';
 
 interface Certificate {
   name: string;

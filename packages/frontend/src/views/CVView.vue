@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import CVControl from '@/components/cv/CVControl.vue';
-import CVPage from '@/components/cv/CVPage.vue';
-
 const route = useRoute();
 
 // 为子组件提供日志来源

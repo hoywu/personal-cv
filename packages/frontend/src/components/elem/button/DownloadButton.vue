@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Popover from '@/components/elem/Popover.vue';
-
 </script>
 
 <template>

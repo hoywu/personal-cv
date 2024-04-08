@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import * as log from '@/data/log';
-import Text from '@/components/pdf/elem/Text.vue';
 
 const props = defineProps<{
   link: string;

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import Text from '@/components/pdf/elem/Text.vue';
-import Paragraph from '@/components/pdf/elem/Paragraph.vue';
-
 export interface PointTextProps {
   bold?: string;
   breakAfterBold?: boolean;

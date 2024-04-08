@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import cvData from '@/data/CVData';
-import Text from '@/components/pdf/elem/Text.vue';
-import Paragraph from '@/components/pdf/elem/Paragraph.vue';
-import ContentBlock from '@/components/pdf/elem/ContentBlock.vue';
-import PointText, { type PointTextProps } from '@/components/pdf/elem/PointText.vue';
+import type { PointTextProps } from '@/components/pdf/elem/PointText.vue';
 
 const edu = cvData.value!.edu_base;
 

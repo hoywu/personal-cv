@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Text from '@/components/pdf/elem/Text.vue';
-
 const props = defineProps<{
   headerContent?: string[];
   headerClass?: string;

@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import cvData from '@/data/CVData';
-import ContentBlock from '@/components/pdf/elem/ContentBlock.vue';
-import PointText from '@/components/pdf/elem/PointText.vue';
 import { removeWrap } from '@/utils/TextUtil';
 
 interface Project {

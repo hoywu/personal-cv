@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import * as log from '@/data/log';
 import * as Msg from '@/utils/Msg';
-import Text from '@/components/pdf/elem/Text.vue';
 
 const props = defineProps<{
   text: string;

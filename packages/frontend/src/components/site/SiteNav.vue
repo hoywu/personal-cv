@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import DynamicIcon from '@/components/elem/DynamicIcon.vue';
-
 export interface navItem {
   name: string;
   title: string;

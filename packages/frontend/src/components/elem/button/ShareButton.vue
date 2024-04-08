@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import * as log from '@/data/log';
-import Popover from '@/components/elem/Popover.vue';
-import Divider from '@/components/elem/Divider.vue';
 import * as Msg from '@/utils/Msg';
 import QrcodeVue from 'qrcode.vue';
 
