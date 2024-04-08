@@ -14,6 +14,13 @@
 
   --primary-color: #7e7e7e;
   --secondary-color: #e4e4e4;
+  --cv-background-color: white;
+}
+
+:root.dark {
+  --primary-color: var(--neutral-400);
+  --secondary-color: var(--neutral-200);
+  --cv-background-color: var(--neutral-150);
 }
 
 /* .--pdf-list-item {

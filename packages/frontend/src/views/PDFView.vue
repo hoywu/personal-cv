@@ -104,6 +104,8 @@ function print() {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: var(--cv-background-color);
 }
 
 #cv-box>* {
@@ -118,7 +120,5 @@ function print() {
   --webkit-transform-origin: center;
   -moz-transform-origin: center;
   -o-transform-origin: center;
-
-  background-color: white;
 }
 </style>

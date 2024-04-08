@@ -2,7 +2,8 @@
 @import './fonts/fonts.css';
 
 :root {
-  --cv-page-color: white;
+  --black: #000000;
+  --cv-page-color: #ffffff;
   --cv-font-size: 14px;
   --cv-icon-text-size: 14px;
 
@@ -10,6 +11,11 @@
   --cv-my-title-font-size: var(--cv-font-size);
   --cv-my-info-font-size: 14px;
   --cv-sep-font-size: 17px;
+}
+
+:root.dark {
+  --black: #ffffff;
+  --cv-page-color: var(--neutral-150);
 }
 
 #app {

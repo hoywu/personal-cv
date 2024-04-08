@@ -44,6 +44,20 @@
   --neutral-950: #0d0e0f;
 }
 
+:root.dark {
+  --neutral-100: #0d0e0f;
+  --neutral-150: #222526;
+  --neutral-200: #484c4f;
+  --neutral-300: #6d7378;
+  --neutral-400: #939aa1;
+  --neutral-500: #b9c0c9;
+  --neutral-600: #c9ced6;
+  --neutral-700: #d9dce3;
+  --neutral-800: #e9ebf0;
+  --neutral-900: #f3f4f6;
+  --neutral-950: #fafafc;
+}
+
 body {
   margin: 0;
   background-color: var(--neutral-100);

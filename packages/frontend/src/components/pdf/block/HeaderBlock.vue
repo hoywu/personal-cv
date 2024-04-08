@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import cvData from '@/data/CVData';
-import Text from '@/components/pdf/elem/Text.vue';
-import LinkText from '@/components/pdf/elem/LinkText.vue';
-import ButtonText from '@/components/pdf/elem/ButtonText.vue';
 
 const myInfo = cvData.value!.base;
 const watermark = cvData.value!.watermark;
@@ -22,34 +19,34 @@ const watermark = cvData.value!.watermark;
 
         <div class="header-icon-group-column">
           <div class="icon-group">
-            <img src="@/assets/icon/person.svg">
+            <icon-material-symbols:person-rounded />
             <Text>{{ myInfo.age }}岁</Text>
           </div>
           <div class="icon-group">
-            <img src="@/assets/icon/phone.svg">
+            <icon-material-symbols:call />
             <ButtonText :text="myInfo.phone" />
           </div>
         </div>
 
         <div class="header-icon-group-column">
           <div class="icon-group">
-            <img src="@/assets/icon/home.svg">
+            <icon-material-symbols:location-on-rounded />
             <Text>{{ myInfo.address }}</Text>
           </div>
           <div class="icon-group">
-            <img src="@/assets/icon/mail.svg">
+            <icon-material-symbols:mail-outline-rounded />
             <ButtonText :text="myInfo.email" />
           </div>
         </div>
 
         <div class="header-icon-group-column">
           <div class="icon-group">
-            <img src="@/assets/icon/wordpress.svg">
+            <icon-ic:baseline-wordpress />
             <LinkText :text="myInfo.blog.text"
                       :link="myInfo.blog.link" />
           </div>
           <div class="icon-group">
-            <img src="@/assets/icon/github.svg">
+            <icon-mdi:github />
             <LinkText :text="myInfo.github.text"
                       :link="myInfo.github.link" />
           </div>
@@ -123,7 +120,8 @@ const watermark = cvData.value!.watermark;
   gap: 1mm;
 }
 
-.icon-group img {
+.icon-group img,
+.icon-group svg {
   width: 20px;
   height: 20px;
 }

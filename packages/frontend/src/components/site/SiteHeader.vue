@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import SiteNav from '@/components/site/SiteNav.vue';
-
 </script>
 
 <template>
   <div id="header-wrapper" class="no-print">
     <header>
-      <img class="logo" src="@/assets/logo.svg" />
-      <SiteNav />
+      <div class="header-left">
+        <img class="logo" src="@/assets/logo.svg" />
+        <SiteNav />
+      </div>
+      <div class="header-right">
+        <ThemeToggle />
+      </div>
     </header>
   </div>
 </template>
@@ -20,12 +23,19 @@ import SiteNav from '@/components/site/SiteNav.vue';
 }
 
 header {
+  display: flex;
   max-width: var(--page-width);
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 0 auto;
+}
+
+.header-left,
+.header-right {
   display: flex;
   gap: 20px;
   align-items: center;
-  padding: 10px 20px;
-  margin: 0 auto;
 }
 
 .logo {
