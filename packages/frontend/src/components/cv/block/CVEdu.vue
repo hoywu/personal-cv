@@ -12,7 +12,6 @@ import cvData from '@/data/CVData';
           <icon-material-symbols-school-rounded />
         </IconText>
       </div>
-      <br>
       <CVText withDot>GPA: {{ cvData?.edu.gpa }}</CVText>
       <CVText withDot>主修课程: {{ cvData?.edu.course }}</CVText>
       <CVText>{{ cvData?.edu.course_para }}</CVText>
