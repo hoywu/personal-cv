@@ -43,6 +43,7 @@ declare module 'vue' {
     IconEpPrinter: typeof import('~icons/ep/printer')['default']
     IconEpShare: typeof import('~icons/ep/share')['default']
     IconIcRoundWordpress: typeof import('~icons/ic/round-wordpress')['default']
+    IconLink: typeof import('./src/components/cv/elem/IconLink.vue')['default']
     IconMaterialSymbolsLocationOnRounded: typeof import('~icons/material-symbols/location-on-rounded')['default']
     IconMaterialSymbolsMailRounded: typeof import('~icons/material-symbols/mail-rounded')['default']
     IconMaterialSymbolsPermPhoneMsgRounded: typeof import('~icons/material-symbols/perm-phone-msg-rounded')['default']
