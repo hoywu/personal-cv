@@ -3,6 +3,7 @@
 
 :root {
   --black: #000000;
+  --icon-color: #333333;
   --cv-page-color: #ffffff;
   --cv-font-size: 14px;
   --cv-icon-text-size: 14px;
@@ -15,6 +16,7 @@
 
 :root.dark {
   --black: #ffffff;
+  --icon-color: #ffffff;
   --cv-page-color: var(--neutral-150);
 }
 

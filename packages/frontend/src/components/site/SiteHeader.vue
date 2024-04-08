@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import Logo from '@/assets/Logo.vue';
 </script>
 
 <template>
   <div id="header-wrapper" class="no-print">
     <header>
       <div class="header-left">
-        <img class="logo" src="@/assets/logo.svg" />
+        <Logo class="logo" />
         <SiteNav />
       </div>
       <div class="header-right">
