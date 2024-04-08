@@ -7,8 +7,11 @@ const toggleDark = useToggle(isDark)
 
 <template>
   <div class="theme-toggle-button" @click="toggleDark()">
-    <el-icon>
-
+    <el-icon v-if="isDark">
+      <icon-material-symbols:sunny-outline-rounded />
+    </el-icon>
+    <el-icon v-else>
+      <icon-material-symbols:dark-mode-rounded />
     </el-icon>
   </div>
 </template>
@@ -16,7 +19,6 @@ const toggleDark = useToggle(isDark)
 <style scoped>
 .theme-toggle-button {
   display: flex;
-  gap: 10px;
   align-items: center;
   justify-content: center;
   padding: 5px;
@@ -24,7 +26,7 @@ const toggleDark = useToggle(isDark)
   background-color: var(--neutral-200);
   color: var(--neutral-800);
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition: all 0.3s ease-in-out;
 }
 
 .theme-toggle-button:hover {
