@@ -32,6 +32,7 @@ const date = moreSpace(props.date, '-');
 }
 
 .dated-block__content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
