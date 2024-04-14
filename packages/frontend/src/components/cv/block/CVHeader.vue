@@ -6,13 +6,32 @@ import cvData from '@/data/CVData';
   <div id="header-block">
     <div id="content-box">
 
-      <div id="name">{{ cvData?.base.name }}</div>
-      <div id="city-row">
-        <div id="my-title">{{ cvData?.base.title }}</div>
+      <div id="name-row">
+        <div id="name-box">
+          <div id="name">{{ cvData?.base.name }}</div>
+          <el-icon v-if="cvData?.base.sex === '男'">
+            <icon-fluent-emoji-flat:male-sign />
+          </el-icon>
+          <el-icon v-else>
+            <icon-fluent-emoji-flat:female-sign />
+          </el-icon>
+        </div>
+
         <IconText :text="cvData?.base.city">
           <icon-material-symbols-location-on-rounded />
         </IconText>
+
+        <IconText :text="cvData?.base.birth">
+          <icon-material-symbols-cake-rounded />
+        </IconText>
       </div>
+
+      <div class="my-title" v-if="cvData?.base.intention">
+        求职意向: {{ cvData?.base.intention }}
+      </div>
+      <!-- <div class="my-title" v-if="cvData?.base.title">
+        {{ cvData?.base.title }}
+      </div> -->
 
       <div id="my-info-box">
         <el-row>
@@ -71,17 +90,23 @@ import cvData from '@/data/CVData';
   gap: 8px;
 }
 
+#name-row {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+#name-box {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
 #name {
   font-size: var(--cv-name-font-size);
 }
 
-#city-row {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-#my-title {
+.my-title {
   font-size: var(--cv-my-title-font-size);
   color: var(--neutral-700);
 }

@@ -10,6 +10,7 @@ export interface CVData {
     sex: string;
     title: string;
     intention: string;
+    birth: string;
     age: number;
     phone: string;
     address: string;
