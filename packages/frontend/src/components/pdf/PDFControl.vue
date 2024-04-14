@@ -13,15 +13,24 @@ function printBtn() {
     'PrintButton',
   )
 }
+
+// 与页面共享的数据
+const showPhoto = inject('showPhoto', ref(false));
 </script>
 
 <template>
   <div id="control-box" class="no-print">
-    <PrintButton @print="printBtn" />
+
+    <div id="control-box-left">
+      <PrintButton @print="printBtn" />
+      <el-switch v-model="showPhoto" active-text="显示照片" />
+    </div>
+
     <div id="control-box-right">
       <DownloadButton />
       <ShareButton />
     </div>
+
   </div>
 </template>
 
@@ -34,6 +43,7 @@ function printBtn() {
   justify-content: space-between;
 }
 
+#control-box-left,
 #control-box-right {
   display: flex;
   align-items: center;

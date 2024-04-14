@@ -10,6 +10,10 @@ const route = useRoute();
 // 为子组件提供日志来源
 provide('logFrom', route.name?.toString() || route.fullPath);
 
+// 控制栏与页面共享的数据
+const showPhoto = ref(true);
+provide('showPhoto', showPhoto);
+
 // 动态加载CSS
 const style = document.createElement('style');
 style.textContent = pdfStyle;

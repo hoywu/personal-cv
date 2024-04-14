@@ -3,24 +3,32 @@ import cvData from '@/data/CVData';
 
 const myInfo = cvData.value!.base;
 const watermark = cvData.value!.watermark;
+
+// 注入的数据
+const showPhoto = inject('showPhoto', ref(false));
 </script>
 
 <template>
   <div class="header">
 
-    <div class="photo">
+    <div class="photo" v-if="showPhoto">
       <img :src="'data:image/png;base64,' + cvData!.photo">
     </div>
 
     <div class="header-text">
-      <Text class="name">{{ myInfo.name }}</Text>
+      <div class="header-name-row">
+        <Text class="name">{{ myInfo.name }}</Text>
+        <!-- <Text class="intention" v-if="myInfo.intention">
+          求职意向: {{ myInfo.intention }}
+        </Text> -->
+      </div>
 
       <div class="header-icon-group">
 
         <div class="header-icon-group-column">
           <div class="icon-group">
             <icon-material-symbols:person-rounded />
-            <Text>{{ myInfo.age }}岁</Text>
+            <Text>{{ myInfo.sex }}/{{ myInfo.age }}岁</Text>
           </div>
           <div class="icon-group">
             <icon-material-symbols:call />
@@ -66,6 +74,7 @@ const watermark = cvData.value!.watermark;
 /********** 页面头部信息 **********/
 .header {
   display: flex;
+  gap: 5mm;
   position: relative;
   margin: 5mm var(--page-margin) 5mm var(--page-margin);
 }
@@ -92,15 +101,27 @@ const watermark = cvData.value!.watermark;
 }
 
 .header-text {
-  margin: 5mm 0 0 10mm;
+  display: flex;
+  flex-direction: column;
+  gap: 4mm;
+  margin-top: 5mm;
+  margin-left: 5mm;
   width: 100%;
+}
+
+.header-name-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 .name {
   display: block;
   font-size: var(--name-font-size);
-  margin: 0 0 4mm 0;
-  padding: 0;
+}
+
+.intention {
+  color: var(--neutral-500);
 }
 
 .header-icon-group {
