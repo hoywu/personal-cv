@@ -7,7 +7,9 @@ export interface CVData {
   photo: string;
   base: {
     name: string;
+    sex: string;
     title: string;
+    intention: string;
     age: number;
     phone: string;
     address: string;
