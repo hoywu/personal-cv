@@ -3,6 +3,7 @@ export enum LogType {
   Leave,
   Click,
   API,
+  Firewall,
 }
 
 export const logType = [
@@ -10,6 +11,7 @@ export const logType = [
   "离开",
   "点击",
   "接口",
+  "防火墙",
 ];
 
 type tagType = 'primary' | 'success' | 'info' | 'warning' | 'danger';
@@ -18,4 +20,5 @@ export const logTypeTag: tagType[] = [
   "danger",
   "success",
   "info",
+  "warning",
 ];
