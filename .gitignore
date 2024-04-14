@@ -1,3 +1,6 @@
+auto-imports.d.ts
+components.d.ts
+
 # Private
 /photo/
 .env.production
