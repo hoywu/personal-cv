@@ -33,6 +33,14 @@ const cvBox: Ref<HTMLElement | null> = ref(null);
 const cvBoxOriginHeight = ref(0);
 const cvBoxHeight = computed(() => cvBoxOriginHeight.value * scale.value);
 
+function onResize() {
+  warning.value = checkWidth();
+  screenWidth.value = window.innerWidth;
+  if (cvBox.value) {
+    cvBox.value.style.height = cvBoxHeight.value + 'px';
+  }
+}
+
 onMounted(() => {
   // 载入CSS
   document.head.appendChild(style);
@@ -42,15 +50,14 @@ onMounted(() => {
   cvBox.value!.style.height = cvBoxHeight.value + 'px';
 
   // 实时计算缩放系数、更改容器高度
-  window.addEventListener('resize', () => {
-    warning.value = checkWidth();
-    screenWidth.value = window.innerWidth;
-    cvBox.value!.style.height = cvBoxHeight.value + 'px';
-  });
+  window.addEventListener('resize', onResize);
 });
 onUnmounted(() => {
   //卸载CSS
   document.head.removeChild(style);
+
+  // 移除事件监听
+  window.removeEventListener('resize', onResize);
 });
 
 function print() {
@@ -69,7 +76,7 @@ function print() {
       <div id="alert-content">
         <span>请返回</span>
         <el-link type="primary" @click="router.push({ name: 'cv' })" link>首页</el-link>
-        <span>，或点击“下载”按钮下载 A4 PDF 文件</span>
+        <span>，或点击“分享”至电脑端访问</span>
       </div>
     </el-alert>
   </div>
