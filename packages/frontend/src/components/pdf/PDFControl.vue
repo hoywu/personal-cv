@@ -27,7 +27,7 @@ const showPhoto = inject('showPhoto', ref(false));
     </div>
 
     <div id="control-box-right">
-      <DownloadButton />
+      <!-- <DownloadButton /> -->
       <ShareButton />
     </div>
 

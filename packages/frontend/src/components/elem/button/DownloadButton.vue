@@ -1,4 +1,16 @@
 <script setup lang="ts">
+import * as log from '@/data/log';
+
+const logFrom = inject('logFrom');
+
+function downloadPDF() {
+  // TODO
+  window.open('简历.pdf');
+  log.logClick(
+    'page:' + logFrom,
+    'DownloadButton_PDF',
+  )
+}
 </script>
 
 <template>
@@ -12,6 +24,9 @@
       </el-button>
     </template>
 
+    <el-button @click="downloadPDF" text>
+      PDF 文档
+    </el-button>
 
   </Popover>
 </template>
