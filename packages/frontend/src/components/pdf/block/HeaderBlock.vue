@@ -5,7 +5,8 @@ const myInfo = cvData.value!.base;
 const watermark = cvData.value!.watermark;
 
 // 注入的数据
-const showPhoto = inject('showPhoto', ref(false));
+const showPhoto = inject('showPhoto', ref(true));
+const showWatermark = inject('showWatermark', ref(true));
 </script>
 
 <template>
@@ -63,8 +64,8 @@ const showPhoto = inject('showPhoto', ref(false));
       </div>
     </div>
 
-    <div id="watermark-link">
-      <div v-for="text of watermark">{{ text }}</div>
+    <div v-if="showWatermark" id="watermark-link">
+      <Watermark v-for="text of watermark" :text="text" />
     </div>
 
   </div>
@@ -151,8 +152,6 @@ const showPhoto = inject('showPhoto', ref(false));
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 13px;
-  color: var(--neutral-500);
   /* text-align: right; */
 }
 </style>
